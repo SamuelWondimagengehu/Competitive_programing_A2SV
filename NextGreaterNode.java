@@ -22,8 +22,7 @@ class Solution {
         Stack<Integer> stack = new Stack();
 
         for(int i = 0; i < node_vals.size(); i++) {
-            while(!stack.isEmpty() && 
-                node_vals.get(stack.peek()) < node_vals.get(i)) {
+            while(!stack.isEmpty() && node_vals.get(stack.peek()) < node_vals.get(i)) {
                 output[stack.pop()] = node_vals.get(i);
             }
             stack.push(i);
