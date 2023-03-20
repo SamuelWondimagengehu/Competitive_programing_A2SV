@@ -1,1 +1,2 @@
-# This is a repository I will put solutions to Data structures and algorithms from leetcode,hackerrank and codeforces problems on. 
+# Competetive programming solutions to 
+leetcode.com hackerrank.com and codeforces.com
