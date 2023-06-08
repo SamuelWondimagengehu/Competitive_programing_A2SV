@@ -10,4 +10,5 @@ class Solution:
                 index = positions[i]
                 nums[index] = j
                 positions[nums[index]] = index
+                
         return nums
