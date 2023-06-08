@@ -8,6 +8,5 @@ class Solution:
             last_index = space
             ans += ' '
         ans += s[last_index:]
-            
         
         return ans
