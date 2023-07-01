@@ -5,7 +5,7 @@ class Solution:
         """
         seeker, placeholder = 0, 0
         
-        while seeker < len(nums):
+        while seeker <= len(nums) - 1:
             if nums[seeker] != 0:
                 nums[placeholder], nums[seeker] = nums[seeker], nums[placeholder]
                 placeholder += 1
