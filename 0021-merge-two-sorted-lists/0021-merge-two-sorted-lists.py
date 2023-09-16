@@ -8,7 +8,7 @@ class Solution:
         temp = ListNode()
         current_node = temp
         
-        while list1 != None and list2 != None:
+        while list1 and list2:
             if list1.val < list2.val:
                 current_node.next = list1
                 list1 = list1.next
@@ -17,11 +17,11 @@ class Solution:
                 list2 = list2.next
             current_node = current_node.next
             
-        while list1 != None:
+        while list1:
             current_node.next = list1
             current_node, list1 = current_node.next, list1.next
             
-        while list2 != None:
+        while list2:
             current_node.next = list2
             current_node, list2 = current_node.next, list2.next
             
