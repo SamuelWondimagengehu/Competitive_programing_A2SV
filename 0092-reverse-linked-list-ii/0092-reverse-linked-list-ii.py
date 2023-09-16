@@ -14,12 +14,10 @@ class Solution:
             prev, current_node = current_node, current_node.next
             left, right = left - 1, right - 1
         
-        con = prev
-        tail = current_node
+        con, tail = prev, current_node
         
         while right > 0:
-            next_node = current_node.next
-            current_node.next = prev
+            next_node, current_node.next = current_node.next, prev
             prev, current_node = current_node, next_node
             right -= 1
         
