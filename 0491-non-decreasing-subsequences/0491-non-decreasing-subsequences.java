@@ -6,7 +6,7 @@ class Solution {
         return new ArrayList(ans);
     }
     
-    private void recursion(int[] nums,int curr, List<Integer> currList) {
+    private void recursion(int[] nums, int curr, List<Integer> currList) {
         if(currList.size() >= 2) {
             ans.add(new ArrayList(currList));
         }
@@ -15,7 +15,7 @@ class Solution {
             if(currList.size() == 0 || currList.get(currList.size() - 1) <= nums[i]) {
                 currList.add(nums[i]);
                 recursion(nums, i + 1, currList);
-                currList.remove(currList.size() - 1);   
+                currList.remove(currList.size() - 1);
             }
         }
     }
