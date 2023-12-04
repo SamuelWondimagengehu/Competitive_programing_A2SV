@@ -9,6 +9,7 @@ class Solution:
         
         if len(word1) < len(word2):
             answer += word2[b:]
+            
         if len(word1) > len(word2):
             answer += word1[a:]
         
