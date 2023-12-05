@@ -2,10 +2,12 @@ class Solution:
     def printVertically(self, s: str) -> List[str]:
         words = s.split()
         max_len = 0
+        
         # get the length of the longest string in the array
         for word in words:
             if len(word) > max_len:
                 max_len = len(word)
+                
         # initialize the answer array with empty strings
         ans = ["" for i in range(max_len)]
         
