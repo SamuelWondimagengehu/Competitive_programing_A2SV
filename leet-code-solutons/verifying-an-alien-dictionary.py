@@ -3,6 +3,7 @@ class Solution:
         #compare two consecutive words
         #if the index of their characters in order is not proper return false
         #continue until the shortest string ends
+        
         book = {}
         for i, o in enumerate(order):
             book[o] = i
@@ -16,5 +17,6 @@ class Solution:
                     if book[words[i][j]] > book[words[i + 1][j]]:
                         return False
                     break
+                    
         return True
                 
