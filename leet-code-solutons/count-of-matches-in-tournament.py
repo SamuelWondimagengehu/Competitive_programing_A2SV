@@ -10,5 +10,5 @@ class Solution:
             else:
                 matches.append((temp - 1) // 2)
                 temp = ((temp - 1) / 2) + 1
-        print(matches)
+
         return int(sum(matches))
