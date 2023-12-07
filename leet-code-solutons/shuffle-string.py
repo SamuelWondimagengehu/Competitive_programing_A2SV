@@ -4,4 +4,5 @@ class Solution:
         
         for i, ii in enumerate(indices):
             ans[ii] = s[i]
+            
         return "".join(ans)
