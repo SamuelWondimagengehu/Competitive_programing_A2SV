@@ -2,6 +2,7 @@ class Solution:
     def findWords(self, words: List[str]) -> List[str]:
         row_1, row_2, row_3 = "qwertyuiop", "asdfghjkl", "zxcvbnm"
         ans = []
+        
         for word in words:
             temp = word
             word = word.lower()
