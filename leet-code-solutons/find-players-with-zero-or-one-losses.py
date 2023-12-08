@@ -1,7 +1,7 @@
 class Solution:
     def findWinners(self, matches: List[List[int]]) -> List[List[int]]:
         losses = collections.Counter()
-        players = set()
+        players = set() # to catch all the players without any repetitions
         
         for winner, loser in matches:
             losses[loser] += 1
@@ -12,9 +12,9 @@ class Solution:
         
         for player in players:
             if losses[player] == 0:
-                no_losses.append(player)
+                no_losses.append(player) # collect players without any losses
             elif losses[player] == 1:
-                one_loss.append(player)
+                one_loss.append(player) # collect players with only one loss
         
         return [sorted(no_losses), sorted(one_loss)]
 
