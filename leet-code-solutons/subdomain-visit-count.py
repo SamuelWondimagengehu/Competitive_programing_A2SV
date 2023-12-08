@@ -15,4 +15,4 @@ class Solution:
             
                 book[subdomain] += c
         
-        return [str(book[key]) + " " + key for key in book.keys()]
+        return [str(value) + " " + key for key, value in book.items()]
