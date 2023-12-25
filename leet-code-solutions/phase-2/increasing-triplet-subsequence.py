@@ -3,7 +3,7 @@ class Solution:
         if len(nums) < 3:
             return False
         
-        min_val, second_min_val = float("inf"), float("inf")
+        min_val = second_min_val = float("inf")
         
         for num in nums:
             if num <= min_val:
