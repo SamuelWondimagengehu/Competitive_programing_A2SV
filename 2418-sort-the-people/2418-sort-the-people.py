@@ -3,8 +3,11 @@ class Solution:
         n = len(names)
         
         for i in range(n):
-            for j in range(1, n):
-                if heights[j - 1] < heights[j]:
-                    names[j - 1], names[j] = names[j], names[j - 1]
-                    heights[j - 1], heights[j] = heights[j], heights[j - 1]        
+            min_idx = i
+            for j in range(i + 1, n):
+                if heights[min_idx] < heights[j]:
+                    min_idx = j
+            names[min_idx], names[i] = names[i], names[min_idx]
+            heights[min_idx], heights[i] = heights[i], heights[min_idx]
+            
         return names
