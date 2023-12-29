@@ -1,29 +1,19 @@
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        nums1.sort()
+        nums2.sort()
+        
+        a_ptr, b_ptr = 0, 0
         answer = []
-        c1, c2 = Counter(nums1), Counter(nums2)
         
-        dups = set()
-        
-        for num in nums1:
-            if num in nums2:
-                dups.add(num)
-            
-        for k, v in c1.items():
-            if c1[k] > c2[k]:
-                count = c2[k]
-                while count:
-                    answer.append(k)
-                    count -= 1
-            elif c1[k] < c2[k]:
-                count = c1[k]
-                while count:
-                    answer.append(k)
-                    count -= 1
+        while a_ptr < len(nums1) and b_ptr < len(nums2):
+            if nums1[a_ptr] < nums2[b_ptr]:
+                a_ptr += 1
+            elif nums1[a_ptr] > nums2[b_ptr]:
+                b_ptr += 1
             else:
-                count = c1[k]
-                while count:
-                    answer.append(k)
-                    count -= 1
-                    
+                answer.append(nums1[a_ptr])
+                a_ptr += 1
+                b_ptr += 1
+                
         return answer
