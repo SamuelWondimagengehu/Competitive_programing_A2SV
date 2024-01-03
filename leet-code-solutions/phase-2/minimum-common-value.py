@@ -1,7 +1,6 @@
 class Solution:
     def getCommon(self, nums1: List[int], nums2: List[int]) -> int:
         a, b = 0, 0
-        min_common = -1
         
         while (a < len(nums1) and b < len(nums2)) and nums1[a] != nums2[b]:
             if nums1[a] < nums2[b]:
