@@ -11,7 +11,7 @@ class Solution:
             boats += 1
             heaviest -= 1
         
-        if heaviest == lightest:
+        if heaviest == lightest: #if there is one person remaining
             boats += 1
         
         return boats
