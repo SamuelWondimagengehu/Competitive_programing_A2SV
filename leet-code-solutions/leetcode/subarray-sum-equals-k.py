@@ -1,16 +1,17 @@
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-        prefix_sum = 0
-        total = 0
+        answer = 0
+        curr_sum = 0
 
-        frequency = {0: 1}
-        for i in range(len(nums)):
-            prefix_sum += nums[i]
-            target_sum = prefix_sum - k
+        prefix_sums = { 0 : 1}
 
-            if target_sum in frequency:
-                total += frequency[target_sum]
-            
-            frequency[prefix_sum] = frequency.get(prefix_sum, 0) + 1
+        for num in nums:
+            curr_sum += num
+            diff = curr_sum - k
+
+            answer += prefix_sums.get(diff, 0)
+            prefix_sums[curr_sum] = 1 + prefix_sums.get(curr_sum, 0)
         
-        return total
+        return answer
+            
+            
