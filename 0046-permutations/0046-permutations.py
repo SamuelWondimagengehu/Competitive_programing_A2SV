@@ -2,7 +2,7 @@ class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
         result = []
         
-        if (len(nums) == 1):
+        if len(nums) == 1:
             return [nums.copy()]
         
         for i in range(len(nums)):
