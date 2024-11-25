@@ -9,16 +9,13 @@ class Solution:
         for i in range(len(num1)):
             for j in range(len(num2)):
                 digit = int(num1[i]) * int(num2[j])
-                res[i + j] += digit
-                res[i + j + 1] += (res[i + j] // 10)
-                res[i + j] = res[i + j] % 10
+                sum_ = res[i + j] + digit
+                res[i + j] = sum_ % 10
+                res[i + j + 1] += (sum_ // 10)
+
+        while res[len(res) - 1] == 0:
+            res.pop()
         
-        res, beg = res[::-1], 0
-        
-        while beg < len(res) and res[beg] == 0:
-            beg += 1
-        
-        res = map(str, res[beg:])
+        res = map(str, list(reversed(res)))
         
         return "".join(res)
-            
