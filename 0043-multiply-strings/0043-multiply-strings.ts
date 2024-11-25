@@ -16,7 +16,7 @@ function multiply(num1: string, num2: string): string {
             res[i + j + 1] += Math.floor(sum / 10)
         }
     }
-    let beg = 0
+
     while(res[res.length - 1] === 0) { res.pop() }
     
     return res.reverse().join("")
