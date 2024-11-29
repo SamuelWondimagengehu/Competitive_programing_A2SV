@@ -3,7 +3,6 @@ function wordPattern(pattern: string, s: string): boolean {
     
     if(pattern.length != words.length) return false;
     
-   
     const charToWord = new Map<string, string>();
     const wordToChar = new Map<string, string>();
 
